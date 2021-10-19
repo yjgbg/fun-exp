@@ -1,6 +1,8 @@
-package com.github.yjgbg.fun.valid.scala
+package com.github.yjgbg.fun.valid
 
-object Mac:
+import scala.annotation.tailrec
+
+object Macros:
   inline def propName[A](inline getter: A => Any): String = ${getterName('getter)}
 
   import scala.quoted.*
@@ -13,6 +15,7 @@ object Mac:
       .asInstanceOf[DefDef].rhs.get
       .asInstanceOf[Select].name)
 
+  @tailrec
   private def inlineBody(quotes: Quotes, term: quotes.reflect.Term): quotes.reflect.Term = term match {
     case it: quotes.reflect.Inlined => inlineBody(quotes, it.body)
     case _ => term

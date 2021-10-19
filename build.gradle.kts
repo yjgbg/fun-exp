@@ -14,15 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation("io.vavr:vavr:0.10.4")
+    implementation("org.typelevel:cats-core_3:2.6.1")
     implementation("org.scala-lang:scala3-library_3:3.0.2")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("com.github.yjgbg:fun-valid:ROLLING-PARALLEL-SNAPSHOT")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    compileOnly("org.projectlombok:lombok")
-    runtimeOnly("com.h2database:h2")
-    annotationProcessor("org.projectlombok:lombok")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<Test> {
