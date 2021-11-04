@@ -16,7 +16,7 @@ repositories {
 dependencies {
     implementation("org.typelevel:cats-core_3:2.6.1")
     implementation("org.scala-lang:scala3-library_3:3.1.0")
-    implementation("org.scala-lang:scala3-compiler_3:3.1.0")
+//    implementation("org.scala-lang:scala3-compiler_3:3.1.0")
 }
 
 tasks.withType<Test> {

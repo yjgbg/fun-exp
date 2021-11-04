@@ -16,7 +16,6 @@ object Macros:
       .asInstanceOf[Select].name)
 
   @tailrec
-  private def inlineBody(quotes: Quotes, term: quotes.reflect.Term): quotes.reflect.Term = term match {
+  private def inlineBody(quotes: Quotes, term: quotes.reflect.Term): quotes.reflect.Term = term match
     case it: quotes.reflect.Inlined => inlineBody(quotes, it.body)
     case _ => term
-  }
